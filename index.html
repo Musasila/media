@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        body {
+            height: 100vh;
+            background: white;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position:center;
+        }
+        * {
+            margin: 1px;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            list-style: none;
+            text-decoration: none;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: #fff;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 8%;
+            box-shadow: 0 5px 10px #000;
+            border: 1px solid #000;
+        }
+
+      
+        header nav ul li {
+            position: relative;
+            float: left;
+        }
+
+        header nav ul li a {
+            padding: 15px;
+            color: #000;
+            font-size: 16px;
+            display: block;
+        }
+
+        header nav ul li a:hover {
+            background: gold;
+            color: #fff;
+        }
+
+        nav ul li ul {
+            position: absolute;
+            left: 0;
+            width: 180px;
+            background: #fff;
+            display: none;
+        }
+
+        nav ul li ul li {
+            width: 100%;
+            border: 1px solid rgba(0,0,0,.1);
+        }
+
+        nav ul li ul li ul {
+            left: 180px;
+            top: 0;
+
+        }
+
+        nav ul li:hover> ul {
+            display: initial;
+        }
+        @media (max-width:900px) and (min-width:700px) {
+            nav:nth-child(1) {
+                width: 18%;
+                flex-wrap: wrap;
+                flex-direction: column;
+            }
+        }
+        @media (max-width:700px) and (min-width:200px) {
+            nav:nth-child(1) {
+                flex-direction: column;
+                width: 80%;
+            }
+        }
+       
+    </style>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Musa1</a></li>
+                <li><a href="#">Musa2</a></li>
+                <li><a href="#">Musa3</a>
+                    <ul>
+                        <li><a href="#">Musa</a></li>
+                        <li><a href="#">Musa</a></li>
+                        <li><a href="#">Musa</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Musa4</a>
+                    <ul>
+                        <li><a href="#">Musa</a></li>
+                        <li><a href="#">Musa</a></li>
+                        <li><a href="#">Musa</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Musa5</a></li>
+            </ul>
+        </nav>
+    </header>
+
+</body>
+
+</html>
